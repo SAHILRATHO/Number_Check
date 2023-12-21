@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positive-Nagative-Zero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Number Sing Checker</h1>
+
+        <div class="text">
+            <label for="v1"> Enter A Number:</label>
+            <input type="number" id="v1"><br> <br>
+        </div>
+
+        <div class="btn">
+            <input type="button" id="enter" value="Checker" onclick="checkNumber()">
+
+        </div>
+        <div class="text">
+            <p id="sum"></p>
+        </div>
+    </div>
+    <script>
+        function checkNumber() {
+            var num1 = parseFloat(document.getElementById("v1").value)
+        
+
+            if ( num1 > 0) {
+                document.getElementById("sum").innerHTML = `Tha Number: ${num1} Is Positive`
+            }
+            else if(num1 < 0){
+                document.getElementById("sum").innerHTML = `Tha Number: ${num1} Is Negative`
+            }
+            else if(num1 == 0){
+                document.getElementById("sum").innerHTML = `Tha Number: ${num1} Is Zero`
+            }
+            else {
+                document.getElementById("sum").innerText = "Plase enter a valid number"
+            }
+        }
+
+    </script>
+</body>
+</html>
